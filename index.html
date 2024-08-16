@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('a.jpg') no-repeat center center fixed; /* URL de tu imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .login-container {
+        background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+        padding: 60px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px; /* Ajusta el ancho máximo */
+        text-align: center;
+        position: relative; /* Para posicionar la imagen circular */
+        margin-top: 50px; /* Ajusta el margen superior para separar la imagen del inicio de sesión */
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    .input-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .input-container i {
+        font-size: 20px; /* Tamaño del ícono */
+        margin-right: 10px;
+    }
+    .fa-user {
+        color: #ff0000; /* Color rojo para el ícono de usuario */
+    }
+    .fa-lock {
+        color: #007bff; /* Color azul para el ícono de contraseña */
+    }
+    input, select {
+        width: 100%;
+        padding: 10px; /* Ajusta el relleno */
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px; /* Tamaño de la fuente */
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .error {
+        color: red;
+        margin-bottom: 15px;
+    }
+    .circular-image {
+        position: absolute; /* Posiciona la imagen en relación al contenedor */
+        top: -70px; /* Ajusta la posición vertical para bajar la imagen */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px; /* Ajusta el tamaño de la imagen */
+        height: 100px; /* Ajusta el tamaño de la imagen */
+        border-radius: 50%; /* Hace la imagen circular */
+        overflow: hidden; /* Asegura que la imagen se mantenga circular */
+        border: 20px solid black; /* Borde opcional para la imagen */
+    }
+    .circular-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- Imagen Circular -->
+    <div class="circular-image">
+      <img src="cacao.jpeg" alt="Imagen Circular">
+    </div>
+
+    <h1>Inicio de Sesión</h1>
+    <form action="login.php" method="post">
+      <div class="input-container">
+        <i class="fas fa-user"></i> <!-- Ícono de usuario -->
+        <input type="text" id="username" name="username" placeholder="Nombre de Usuario" required>
+      </div>
+
+      <div class="input-container">
+        <i class="fas fa-lock"></i> <!-- Ícono de contraseña -->
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      </div>
+
+      <label for="role">Rol:</label>
+      <select id="role" name="role" required>
+        <option value="Administrador">Administrador</option>
+        <option value="Empleado">Empleado</option>
+      </select>
+
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <div id="error-message" class="error"></div>
+  </div>
+</body>
+</html>
+
+

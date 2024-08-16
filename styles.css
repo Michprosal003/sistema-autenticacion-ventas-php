@@ -1,0 +1,162 @@
+/* Reset de estilos básicos */
+body, h1, h2, h3, p, ul, li, table, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('hojas.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilos del encabezado */
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e1e4e8;
+    margin: auto;
+}
+
+/* Estilos del título */
+.titulo-futurista {
+    text-align: center;
+    color: black; /* Color negro para el título */
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Estilos de formularios */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form button {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form input[type="text"], form input[type="number"], form input[type="date"], form select {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #004d99;
+    outline: none;
+}
+
+.highlight-field {
+    background-color: #ffffe0;
+    border: 2px solid #004d99;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #004d99; /* Color de fondo para los botones */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente para los botones */
+    padding: 12px 20px; /* Espaciado interno para los botones */
+    border-radius: 6px; /* Bordes redondeados para los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Asegura que el botón se comporte como un elemento en línea */
+    text-align: center;
+    text-decoration: none; /* Elimina el subrayado en el enlace */
+}
+
+/* Estilos de hover para los botones */
+button:hover {
+    background-color: #003366; /* Color de fondo al pasar el mouse sobre los botones */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse sobre los botones */
+}
+
+/* Enlaces */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajustar el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    form input, form select, form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Ajustar aún más el tamaño de fuente para pantallas muy pequeñas */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    form input, form select, form button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajustar el tamaño del encabezado */
+    }
+
+    .titulo-futurista {
+        font-size: 1.5rem; /* Ajustar el tamaño del título */
+    }
+}
